@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" 
+  />
+  <style>
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html, body {
+        width: 100%;
+        height: 100%;
+        font-family: "Poppins", sans-serif;
+        color: #333;
+        background-image: url('image/Arrière_plan.png');
+        background-size: cover;
+        background-position: center;
+        overflow-x: hidden;
+      }
+
+      img {
+          max-width: 100%;
+          height: auto;
+          display: block;
+          margin: 0 auto;
+      }
+
+      /* ---------- HEADER ---------- */
+      fieldset {
+        background-color: whitesmoke;
+        padding: 1rem 2rem;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      fieldset h1 {
+        display: flex;
+        font-size: 1.5rem;
+        color: #007bff;
+        align-items: center;
+        gap: 10px;
+
+      }
+
+      .logo {
+        width: 50px;
+        height: auto;
+        background-color: white;
+        border: rgb(21, 228, 238) solid;
+        border-radius: 50%;
+      }
+
+      nav ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 1rem;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #3a3a3b;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #007bff;
+      }
+
+      .btn-project {
+          display: inline-block;
+          margin-top: 15px;
+          padding: 10px 20px;
+          background-color: whitesmoke;
+          color: #007bff;
+          border-radius: 100px;
+          text-decoration: none;
+          font-weight: bold;
+          transition: background-color 0.3s ease, transform 0.3s;
+      }
+
+      .btn-project:hover {
+          color: white;
+          background-color: #007bff;
+          transform: translateY(-2px);
+      }
+
+      /* --------- BURGER BUTTON --------- */
+      .burger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+      }
+
+      .burger span {
+        width: 20px;
+        height: 3px;
+        background: #333;
+        border-radius: 10px;
+      }
+
+      /*main content*/
+      main {
+        padding: 2rem;
+      }
+
+       /* ---------- HERO ---------- */
+      #hero {
+        width: 100%;
+        min-height: 70vh;
+        padding: 3rem;
+        background: rgb(183, 240, 243);
+        border-radius: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .gauche {
+        flex: 1;
+        min-width: 280px;
+      }
+
+      #hero .gauche h1 {
+        font-size: 2rem;
+        font-weight: 900;
+        color: rgb(51, 51, 197);
+        text-align: center;
+      }
+
+      #hero .gauche p {
+        font-size: 1rem;
+        margin-top: 1rem;
+        color: #000;
+        line-height: 1.5rem;
+        text-align: center;
+      }
+
+      .gauche button {
+        margin-top: 1.4rem;
+        border: none;
+        background-color: #007bff;
+        padding: 0.9rem 1rem;
+        border-radius: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: 1s;
+      }
+
+      .gauche button:hover {
+        background-color: rgb(68, 222, 230);
+      }
+
+       a {
+        text-decoration: none;
+      }
+
+      .droit {
+        flex: 1;
+        min-width: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .droit img {
+        background-color: rgb(68, 222, 230);
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 50%;
+        animation: zoom 10s infinite;
+      }
+
+      /* ---------- FOOTER ---------- */
+      footer {
+        width: 100%;
+        padding: 3rem 5%;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        border-radius: 1rem;
+        text-align: center;
+        background: #f3961c;
+      }
+
+      /*Mise en forme des reseaux*/
+
+      .reseaux {
+          position: fixed;
+          right: 0;
+          bottom: 3rem;
+          background-color: #c2ebd7;
+          padding: 10px;
+          border-radius: 5px;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+      }
+
+      .reseaux .carte {
+          width: 30px;
+          height: 30px;
+          padding: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: 0.3s;
+          cursor: pointer;
+      }
+
+      .carte:hover {
+          background-color: #f3961c;
+          border-radius: 5px;
+      }
+
+      /* --------- NAVIGATION MOBILE --------- */
+      @media (max-width: 768px) {
+        nav {
+          position: absolute;
+          top: 70px;
+          right: 0;
+          width: 200px;
+          background: whitesmoke;
+          border-radius: 0 0 0 10px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+          transform: translateX(100%);
+          transition: transform 0.3s ease;
+        }
+
+        nav.active {
+          transform: translateX(0);
+        }
+
+        nav ul {
+          flex-direction: column;
+          padding: 1rem;
+          gap: 1rem;
+        }
+
+        .burger {
+          display: flex;
+        }
+      }
+
+      @keyframes zoom {
+        0%{
+          transform: scale(0.5);
+        }
+        50%{
+          transform: scale(1);
+        }
+        100%{
+          transform: scale(0.5);
+        }
+      }
+    
+      /* Réorganisation automatique sur mobile */
+      @media (max-width: 768px) {
+        #hero {
+          flex-direction: column;
+          text-align: center;
+          padding: 2rem 1rem;
+        }
+
+        #hero .gauche {
+          max-width: 100%;
+        }
+
+        #hero .droit {
+          margin-top: 1.5rem;
+        }
+
+        .gauche button {
+          width: 80%;
+          font-size: 1rem;
+        }
+
+        .burger {
+          display: flex;
+        }
+
+        nav {
+          position: absolute;
+          top: 70px;
+          right: 0;
+          width: 200px;
+          background: whitesmoke;
+          border-radius: 0 0 0 10px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+          transform: translateX(100%);
+          transition: transform 0.3s ease;
+        }
+
+        nav.active {
+          transform: translateX(0);
+        }
+
+        nav ul {
+          flex-direction: column;
+          padding: 1rem;
+          gap: 1rem;
+        }
+      }
+
+      /* Ajustement des textes et du bouton sur très petits écrans */
+      @media (max-width: 480px) {
+        fieldset h1 {
+          font-size: 1.5rem;
+        }
+
+        .btn-project {
+          padding: 8px 12px;
+          font-size: 0.8rem;
+        }
+
+        #hero .gauche h1 {
+          font-size: 1.8rem;
+        }
+
+        #hero .gauche p {
+          font-size: 1.1rem;
+        }
+
+        footer {
+          padding: 2.5rem;
+          font-size: 0.9rem;
+        }
+      }
+
+      /* Empêche que les icônes sociales gênent sur petit écran */
+      @media (max-width: 500px) {
+        .reseaux {
+          right: 3px;
+          bottom: 2rem;
+          gap: 20px;
+          padding: 5px;
+        }
+
+        .reseaux .carte {
+          padding: 0.5rem;
+          width: 25px;
+          height: 25px;
+        }
+      }
+      
+  </style>
+</head>
+<body>
+  <fieldset>
+    <h1><img src="image\logo.png" alt="logo" class="logo">Alban HINVI</h1>
+
+    <!-- Burger menu -->
+    <div class="burger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+      <ul>
+        <li><a href="index.html" class="btn-project">Accueil</a></li>
+        <li><a href="à_propos.html" class="btn-project">À Propos</a></li>
+        <li><a href="profil.html" class="btn-project">Profil</a></li>
+        <li><a href="service.html" class="btn-project">Services</a></li>
+        <li><a href="projet.html" class="btn-project">Projets</a></li>
+        <li><a href="contact.html" class="btn-project">Contacts</a></li>
+      </ul>
+    </nav>
+
+  </fieldset>
+
+  <main>
+    <section id="hero">
+      <div class="gauche">
+        <h1>Bienvenue sur mon espace🫱!</h1>
+        <p>Découvrez mes projets technologiques : Arduino, programmation, réseaux et bien plus. Un espace pour explorer, apprendre et collaborer.</p>
+        <button><a href="projet.html"><strong style="color: #f3ebeb;">Découvrir mes projets</strong></a></button>
+      </div>
+      <div class="droit">
+        <img src="image\logo.png" alt="photo de profil">
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Tous droits réservés. Conçu avec passion.</p>
+    </footer>
+
+     <!--Médias sociaux liens-->
+        <div class="reseaux">
+            <div class="carte">
+                <a href="https://www.facebook.com/alban.hinvi"><i style="color: #007bff;" class="fab fa-facebook-f"></i></a>
+            </div>
+            <div class="carte">
+                <a href="#"><i style="color: green;" class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="carte">
+                <a href="https://www.google.com/chrome/"><i style="color: #0857f6;" class="fab fa-chrome"></i></a>
+            </div>
+        </div>
+  </main>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("navbar").classList.toggle("active");
+      }
+    </script>
+</body>
+</html>

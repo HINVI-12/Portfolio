@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,body {
+      width: 100%;
+      height: 100%;
+      font-family: "Poppins", sans-serif;
+      color: #333;
+      background-image: url('image/Arrière_plan.png');
+      background-size: cover;
+      background-position: center;
+      overflow-x: hidden;
+    }
+
+    fieldset {
+        background-color: whitesmoke;
+        padding: 1rem 2rem;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+    fieldset h1 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.5rem;
+        color: #007bff;
+        gap: 10px;
+      }
+
+      .logo {
+          width: 50px;
+          height: auto;
+          background-color: white;
+          border: rgb(21, 228, 238) solid;
+          border-radius: 50%;
+      }
+
+      nav ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 1rem;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #3a3a3b;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #007bff;
+      }
+
+      .btn-project {
+          display: inline-block;
+          margin-top: 15px;
+          padding: 10px 20px;
+          background-color: whitesmoke;
+          color: #007bff;
+          border-radius: 100px;
+          text-decoration: none;
+          font-weight: bold;
+          transition: background-color 0.3s ease;
+      }
+
+      .btn-project:hover {
+          color: white;
+          background-color: #007bff;
+          transform: translateY(-2px);
+      }
+
+      /* --------- BURGER BUTTON --------- */
+      .burger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+      }
+
+      .burger span {
+        width: 20px;
+        height: 3px;
+        background: #333;
+        border-radius: 10px;
+      }
+
+      main {
+      padding: 2rem;
+      text-align: center;
+    }
+
+     p .into {
+        
+        font-size: 2rem;
+        color: #000000;
+        margin-bottom: 5rem;
+        animation: fadeIn 2s ease;
+      }
+    .section {
+        padding: 60px 20px;
+        background-color: none;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 3rem;
+        color: #007bff;
+        margin-bottom: 30px;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+     }
+
+    .project-card {
+        background-color: rgb(37, 231, 241);
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        opacity: 0;
+        transform: translateY(40px);
+            
+    }
+
+    .project-card.visible {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.6s ease;
+    }
+
+    .projet-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-projec {
+          display: inline-block;
+          margin-top: 15px;
+          padding: 10px 20px;
+          background-color: rgb(37, 231, 241);
+          color: #007bff;
+          border-radius: 100px;
+          text-decoration: none;
+          font-weight: bold;
+          transition: background-color 0.3s ease;
+      }
+
+      .btn-projec:hover {
+          color: white;
+          background-color: #007bff;
+          transform: translateY(-2px);
+      }
+
+
+    .project-card:hover {
+        transform: translateY(-10px);   
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card h3 {
+        font-size: 1.5rem;
+        color: #007bff;
+        margin-bottom: 15px;
+    }
+
+    .project-card p {
+        font-size: 1rem;
+        color: #534f4f;
+        line-height: 1.6;
+    }
+
+        
+    .project-img {
+        height: 260px;
+        width: 100%;
+        border-radius: 2rem;
+        
+    }
+
+     @keyframes fadeIn {
+            from{
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+     .footer {
+            border-radius: 2rem;
+            background: #f3961c;
+            color: rgb(55, 52, 52);
+            padding: 3rem ;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .footer a {
+            color: #0069d9;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer p {
+            
+            margin: 0.8rem 0;
+            font-size: none;
+        }
+
+        .footer hr {
+            margin: 1rem auto;
+            border: none;
+            border-top: 1px solid rgba(0,0,0,0.2);
+            width: 80%;
+        }
+
+      /* --------- NAVIGATION MOBILE --------- */
+      @media (max-width: 768px) {
+        nav {
+          position: absolute;
+          top: 70px;
+          right: 0;
+          width: 200px;
+          background: whitesmoke;
+          border-radius: 0 0 0 10px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+          transform: translateX(100%);
+          transition: transform 0.3s ease;
+        }
+
+        nav.active {
+          transform: translateX(0);
+        }
+
+        nav ul {
+          flex-direction: column;
+          padding: 1rem;
+          gap: 1rem;
+        }
+
+       
+        .burger {
+          display: flex;
+        }
+      }
+      
+    @media (max-width: 768px){
+        .home {
+            flex-direction: column;
+            text-align: center;
+        }
+
+    }
+
+       /* -------- RESPONSIVE -------- */
+      @media (max-width: 600px) {
+        .footer {
+            padding: 1.5rem;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+            line-height: 1.4rem;
+        }
+
+        .footer hr {
+            width: 100%;
+        }
+
+        /* Les contacts passent à la ligne sur mobile */
+        .footer .cont {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        }
+
+      @media (max-width: 600px) {
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .project-card {
+        padding: 15px;
+      }
+
+      .project-img {
+        height: auto;
+        max-height: 220px;
+      }
+
+      .footer {
+        padding: 1.5rem;
+      }
+    }
+
+        
+</style>
+</head>
+<body>
+    <fieldset>
+        <h1><img src="image\logo.png" alt="logo" class="logo">Alban HINVI</h1>
+
+        <!-- Burger menu -->
+        <div class="burger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Navigation -->
+      <nav id="navbar">
+          <ul>
+            <li><a href="index.html" class="btn-project">Accueil</a></li>
+            <li><a href="à_propos.html" class="btn-project">À Propos</a></li>
+            <li><a href="profil.html" class="btn-project">Profil</a></li>
+            <li><a href="service.html" class="btn-project">Services</a></li>
+            <li><a href="projet.html" class="btn-project">Projets</a></li>
+            <li><a href="contact.html" class="btn-project">Contacts</a></li>
+          </ul>
+      </nav>
+
+    </fieldset>
+    <main>
+         <!-- Projects Section -->
+            <section id="projects" class="section">
+                <h2 class="section-title">Mes Réalisations</h2>
+                <p class="into">Voici quelques-uns de mes projets en électronique, programmation <br>et développement web 😎.</p>
+                <br>
+                <div class="projects-grid">
+                    <div class="project-card" data-project="1">
+                        <h3><i class="fa-solid fa-cloud-sun" style="color: aliceblue;"></i> Station Météo</h3>
+                        <img src="image\station_météo.png" alt="Projet 1" class="project-img">
+                        <p>Projet combinant capteur de température DHT11, écran LCD, et une carte électronique (Arduino, ESP, ou Raspberry-Pi Pico etc) pour mesurer la température et l'humidité, alimenté par pile dans un boitier.</p>
+                        
+
+                    </div>
+
+                     <div class="project-card" data-project="1">
+                        <h3><i class="fa-solid fa-car" style="color: #5f12dc;"></i> Voiture Autonome</h3>
+                        <img src="image\voiture.jpg" alt="Projet 6" class="project-img">
+                        <p>Voiture intelligent contrôlé par une carte électonique, équipé de capteurs ultrasoniques pour éviter les obstacles et pouvant être commandé via smartphone ou via mallette a distance.</p>
+                        
+                    </div>
+
+                    <div class="project-card" data-project="1">
+                        <h3><i class="fa-solid fa-globe" style="color: antiquewhite;"></i> Site Web Portfolio</h3>
+                        <img src="image\portfolio.png" alt="Projet 2" class="project-img">
+                        <p>Conception d'un site complet en HTML, CSS, et JavaScript présentant mes compétences, mes projets et un formulaire de contact.</p>
+                        
+
+                    </div>
+
+                    <div class="project-card" data-project="1">
+                        <h3><i class="fa-solid fa-traffic-light" style="color: #ff0800;"></i> Feux Tricolores 4 voies</h3>
+                        <img src="image\feu.jpg" alt="Projet 4" class="project-img">
+                        <p>Simulation d'un carrefour à 4 voies avec une carte électronique (Arduino, ESP, etc), utilisant des LEDs vertes, jaunes et rouges synchronisées pour gérer la circulation.</p>
+                        
+
+                    </div>
+
+                    <div class="project-card" data-project="1">
+                        <h3><i class="fa-solid fa-id-card" style="color: azure;"></i> Contôle d'accès</h3>
+                        <img src="image\rfid.jpg" alt="Projet 5" class="project-img">
+                        <p>Système de sécurité basé sur le module RFID permettant d'autoriser ou de refuser l'accès à une zone via une carte ou un badge programmé.</p>
+                        
+
+                    </div>
+
+                    <div class="project-card" data-project="1">
+                        <h3><i class="fas fa-user-secret" style="color: brown;"></i> Détecteur de présence automatique</h3>
+                        <img src="image\pir.jpg" alt="Projet 3" class="project-img">
+                        <p>Détecter la présence d'une personne ou d'un objet à l'aide d'un capteur PIR et déclencher une action (Ex: allumer une lampe 220V via un relais, ou activer un buzzer).</p>
+
+                    </div>
+                </div>
+            </section> 
+            <footer class="footer">
+            <p class="cont">Couriée: <a href="mailto:sedjroalbanhinvi@gmail.com">sedjroalbanhinvi@gmail.com</a>   |  
+                Tel: <a href="tel:+2290157441280">0157441280</a></p>
+              <hr style="background: blue;">
+                <p>&copy; 2025 Tous droits réservés. Conçu avec passion.
+            </p>
+        </footer>
+    </main>
+
+    <script>
+        function toggleMenu() {
+          document.getElementById("navbar").classList.toggle("active");
+        }
+        //animation d'apparition progressive des cartes
+      const cards = document.querySelectorAll('.project-card');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+      }, { threshold: 0.2 });
+
+      cards.forEach(card => observer.observe(card));
+    </script>
+</body>
+</html>

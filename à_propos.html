@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos</title>
+
+    <style>
+        /* ========== RESET & BASE ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: "Poppins", sans-serif;
+            color: #333;
+            background-image: url('image/Arrière_plan.png');
+            background-size: cover;
+            background-position: center;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* ========== HEADER ========== */
+        fieldset {
+            background-color: whitesmoke;
+            padding: 1rem 2rem;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        fieldset h1 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+
+        .logo {
+            width: 50px;
+            height: auto;
+            background-color: white;
+            border: solid rgb(21, 228, 238);
+            border-radius: 50%;
+        }
+
+        /* ========== NAVIGATION ========== */
+        nav ul {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #3a3a3b;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        .btn-project {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: whitesmoke;
+            color: #007bff;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s;
+        }
+
+        .btn-project:hover {
+            color: white;
+            background-color: #007bff;
+            transform: translateY(-2px);
+        }
+
+        /* ========== BURGER MENU ========== */
+        .burger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .burger span {
+            width: 20px;
+            height: 3px;
+            background: #333;
+            border-radius: 10px;
+        }
+
+        /* ========== MAIN CONTENT ========== */
+        main {
+            padding: 2rem;
+        }
+
+        /* ----------- HERO SECTION ----------- */
+        #hero {
+            width: 100%;
+            min-height: 70vh;
+            padding: 2rem;
+            background: rgb(183, 240, 243);
+            border-radius: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .gauche {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        #hero .gauche h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: rgb(51, 51, 197);
+        }
+
+        #hero .gauche p {
+            font-size: 1rem;
+            margin-top: 1rem;
+            color: #000;
+            line-height: 1.5rem;
+        }
+
+        .droit {
+            flex: 1;
+            min-width: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .droit img {
+            border-radius: 2rem;
+            object-fit: contain;
+        }
+
+        /* ----------- ABOUT SECTION ----------- */
+        #about {
+            width: 100%;
+            min-height: 70vh;
+            padding: 2rem;
+            background: rgb(183, 240, 243);
+            border-radius: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .what {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        #about .what h3 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: rgb(51, 51, 197);
+        }
+
+        #about .what p {
+            font-size: 1rem;
+            margin-top: 1rem;
+            color: #000;
+            line-height: 1.5rem;
+        }
+
+        .how {
+            flex: 1;
+            min-width: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .how img {
+            border-radius: 2rem;
+            object-fit: contain;
+        }
+
+        /* ----------- SKILLS TAGS ----------- */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #7db6fc 0%, #63e4f6 100%);
+            color: rgb(55, 63, 64);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* ----------- ANIMATIONS ----------- */
+        .animate {
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .animate:hover {
+            transform: scale(1.1);
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            width: 100%;
+            padding: 3rem 5%;
+            margin-top: 2rem;
+        }
+
+        .footer {
+            border-radius: 2rem;
+            background: #f3961c;
+            color: rgb(55, 52, 52);
+            padding: 3rem;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .footer a {
+            color: #0069d9;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer p {
+            margin: 0.8rem 0;
+        }
+
+        .footer hr {
+            margin: 1rem auto;
+            border: none;
+            border-top: 1px solid rgba(0,0,0,0.2);
+            width: 80%;
+        }
+
+        /* ========== RESPONSIVE DESIGN ========== */
+        @media (max-width: 768px) {
+            nav {
+                position: absolute;
+                top: 70px;
+                right: 0;
+                width: 200px;
+                background: whitesmoke;
+                border-radius: 0 0 0 10px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+            }
+
+            nav.active {
+                transform: translateX(0);
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .burger {
+                display: flex;
+            }
+
+            #hero, #about {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 15px;
+            }
+
+            #hero .gauche, #about .what {
+                max-width: 100%;
+            }
+
+            #hero .droit, #about .how {
+                margin-top: 20px;
+            }
+
+            .skills {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer {
+                padding: 1.5rem;
+            }
+
+            .footer p {
+                font-size: 0.9rem;
+                line-height: 1.4rem;
+            }
+
+            .footer hr {
+                width: 100%;
+            }
+
+            .footer .cont {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            fieldset h1 {
+                font-size: 1.1rem;
+            }
+
+            .btn-project {
+                padding: 8px 14px;
+                font-size: 0.8rem;
+            }
+
+            #hero .gauche h1,
+            #about .what h3 {
+                font-size: 1.4rem;
+            }
+
+            #hero .gauche p,
+            #about .what p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <fieldset>
+        <h1><img src="image/logo.png" alt="logo" class="logo"> Alban HINVI</h1>
+
+        <!-- Burger menu -->
+        <div class="burger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navigation -->
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html" class="btn-project">Accueil</a></li>
+                <li><a href="à_propos.html" class="btn-project">À Propos</a></li>
+                <li><a href="profil.html" class="btn-project">Profil</a></li>
+                <li><a href="service.html" class="btn-project">Services</a></li>
+                <li><a href="projet.html" class="btn-project">Projets</a></li>
+                <li><a href="contact.html" class="btn-project">Contacts</a></li>
+            </ul>
+        </nav>
+    </fieldset>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+        <!-- HERO -->
+        <section id="hero">
+            <div class="gauche">
+                <h1>À Propos</h1>
+                <p>🧑‍💻 Passionné par la nouvelle technologie, l'innovation et la créativité,
+                j'essaie de reconstruire les systèmes électroniques et informatiques. Cette passion m'a permis de développer des compétences dans :</p>
+
+                <div class="skills">
+                    <span class="skill-tag">Programmation (C++, Python, MicroPython, HTML, CSS, Algorithmique, PHP)</span>
+                    <span class="skill-tag">Arduino & Systèmes embarqués (Capteurs, Automates, Robotique...)</span>
+                    <span class="skill-tag">Développement de sites web et applications</span>
+                    <span class="skill-tag">Réseaux informatiques</span>
+                    <span class="skill-tag">Électricité & Électronique</span>
+                </div>
+            </div>
+
+            <div class="droit">
+                <img src="image/image1.jpg" alt="photo de profil" class="animate">
+            </div>
+        </section>
+
+        <br><br><hr style="background: #000;"><br><br>
+
+        <!-- ABOUT -->
+        <section id="about">
+            <div class="what">
+                <h3>🎯 Pourquoi ce site ?</h3>
+                <p>Ce site a été créé pour offrir un espace unique de partage et de visibilité. Il a pour objectif principal de présenter de manière claire et organisée des contenus utiles et pertinents pour les visiteurs. Ce site met en avant des projets, des compétences et des réalisations concrètes, afin de valoriser un travail sérieux et professionnel.</p>
+
+                <div class="skills">
+                    <span class="skill-tag">Mes projets et réalisations</span>
+                    <span class="skill-tag">Des idées innovantes dans la technologie et l’ingénierie</span>
+                    <span class="skill-tag">Un espace de contact pour collaborer et échanger</span>
+                </div>
+            </div>
+
+            <div class="how">
+                <img src="image/image3.jpg" alt="photo de profil" class="animate">
+            </div>
+        </section>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer">
+            <p class="cont">
+                Courriel :
+                <a href="mailto:sedjroalbanhinvi@gmail.com">sedjroalbanhinvi@gmail.com</a> |
+                Tel :
+                <a href="tel:+2290157441280">0157441280</a>
+            </p>
+            <hr style="background: blue;">
+            <p>&copy; 2025 Tous droits réservés. Conçu avec passion.</p>
+        </footer>
+    </main>
+
+    <!-- ===== SCRIPT ===== -->
+    <script>
+        function toggleMenu() {
+            document.getElementById("navbar").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

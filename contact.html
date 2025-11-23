@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html,body {
+        width: 100%;
+        height: 100%;
+        background-image: url('image/Arrière_plan.png');
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        overflow-x: hidden;
+    }
+
+    fieldset {
+        background-color: whitesmoke;
+        padding: 1rem 2rem;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    fieldset h1 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.5rem;
+        color: #007bff;
+    }
+
+    .logo {
+        width: 50px;
+        height: auto;
+        background-color: white;
+        border: rgb(21, 228, 238) solid;
+        border-radius: 50%;
+    }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 1rem;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #3a3a3b;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: #007bff;
+    }
+        
+    .btn-project {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: whitesmoke;
+        color: #007bff;
+        border-radius: 100px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-project:hover {
+        color: white;
+        background-color: #007bff;
+        transform: translateY(-2px);
+    }
+
+        /* --------- BURGER BUTTON --------- */
+        .burger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .burger span {
+            width: 20px;
+            height: 3px;
+            background: #333;
+            border-radius: 10px;
+        }
+
+        main {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            color: #007bff;
+            margin-bottom: 30px;
+        }
+
+        .me_contacter {
+            border: solid rgb(129, 184, 204);
+            padding: 25px;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            margin: 40px auto;
+            font-family: Arial;
+            box-sizing: border-box;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            color: #007bff;
+        }
+
+        input {
+            
+            display: block;
+            margin-top: 8px;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            
+        }
+
+        textarea {
+            margin-top: 20px;
+            padding: 10px;
+            width: 100%;
+            border:none ;
+            border-radius: 15px;
+        }
+
+        button {
+            display: block;
+            margin-top: 10px;
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #007bff;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+            border-radius: 5px;
+            color: #007bff;
+            background-color: white;
+        }
+
+        button:hover {
+            color: white;
+            background-color: rgb(100, 150, 170);
+        }
+
+        h2 {
+            display: inline;
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            border-radius: 2rem;
+            background: #f3961c;
+            color: rgb(55, 52, 52);
+            padding: 3rem ;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .footer a {
+            color: #0069d9;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer p {
+            margin: 0.8rem 0;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            word-wrap: break-word;
+        }
+
+        .footer hr {
+            margin: 1rem auto;
+            border: none;
+            border-top: 1px solid rgba(0,0,0,0.2);
+            width: 80%;
+        }
+
+        /* --------- NAVIGATION MOBILE --------- */
+        @media (max-width: 768px) {
+        nav {
+            position: absolute;
+            top: 70px;
+            right: 0;
+            width: 200px;
+            background: whitesmoke;
+            border-radius: 0 0 0 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateX(100%);
+            transition: transform 0.4s ease;
+            box-shadow: 0.3s ease;
+        }
+
+        nav.active {
+            transform: translateX(0);
+            box-shadow: -2px 5px 15px rgba(0, 0, 0, 0.2);
+
+        }
+
+        nav ul {
+            flex-direction: column;
+            padding: 1rem;
+            gap: 1rem;
+        }
+
+        .burger {
+            display: flex;
+        }
+        }       
+       
+        @media (max-width: 600px) {
+        .me_contacter {
+            margin: 20px;
+            padding: 20px;
+        }
+
+        input, button {
+            font-size: 0.9rem;
+            padding: 8px;
+        }
+        }
+
+        @media (max-width: 600px) {
+        .footer {
+            padding: 1.5rem;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+            line-height: 1.4rem;
+        }
+
+        .footer hr {
+            width: 100%;
+        }
+
+        /* Les contacts passent à la ligne sur mobile */
+        .footer .cont {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        }
+        
+        /*centrage du form*/
+        @media (max-width: 600px) {
+        .me_contacter {
+            width: 90%;
+            margin: 20px auto;
+            padding: 15px;
+        }
+
+        label {
+            font-size: 0.9rem;
+        }
+
+        input, textarea, button {
+            font-size: 0.9rem;
+        }
+        }
+        
+        
+</style>
+</head>
+<body>
+   <fieldset>
+        <h1><img src="image\logo.png" alt="logo" class="logo">Alban HINVI</h1>
+
+        <!-- Burger menu -->
+        <div class="burger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+
+        <!-- Navigation -->
+        <nav id="navbar">
+        <ul>
+            <li><a href="index.html" class="btn-project">Accueil</a></li>
+            <li><a href="à_propos.html" class="btn-project">À Propos</a></li>
+            <li><a href="profil.html" class="btn-project">Profil</a></li>
+            <li><a href="service.html" class="btn-project">Services</a></li>
+            <li><a href="projet.html" class="btn-project">Projets</a></li>
+            <li><a href="contact.html" class="btn-project">Contacts</a></li>
+        </ul>
+        </nav>
+
+    </fieldset>
+
+   
+    <main >
+        <section id="contact" class="section">
+           <h2 class="section-title"><span>Me contacter</span></h2>
+            <br><br>
+            <form class="me_contacter" action="envoie_mail.php" method='POST'>
+
+                <label for="address_email">Address Email: </label>
+                <br><input type="email" name="address_email" id="address_email" placeholder="texte@gmail.com" required>
+               
+                <br><label for="telephone">Téléphone:</label>
+                <br><input type="tel" name="telephone" id="telephone" placeholder="Saisiser votre contact*" required>
+                
+                <br><label for="message">Message:</label>
+                <br><textarea id="message" name="message" rows="6" placeholder="Entrée votre méssage*" required></textarea>
+        
+                <br><button type="reset">Effacer</button> 
+                <br><button type="submit">Envoyer</button> 
+
+            </form>
+        </section>
+
+         <hr><br><br>
+        <footer class="footer">
+              <p class="cont">Couriée: <a href="mailto:sedjroalbanhinvi@gmail.com">sedjroalbanhinvi@gmail.com</a>   |  
+                  Tel: <a href="tel:+2290157441280">0157441280</a></p>
+                <hr style="background: blue;">
+                  <p>&copy; 2025 Tous droits réservés. Conçu avec passion.
+              </p>
+          </footer>
+    </main>
+   
+    <script>
+        function toggleMenu() {
+        document.getElementById("navbar").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
