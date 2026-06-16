@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mon Portfolio</title>
+    <!--font awesome icone-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <h1>Alban HINVI</h1>
+            </a>
+
+            <ul>
+                <li><a href="#" class="nav-links">Home</a></li>
+                <li><a href="#about" class="nav-links">About</a></li>
+                <li><a href="#skills" class="nav-links">Skills</a></li>
+                <li><a href="#experiences" class="nav-links">Expériences</a></li>
+                <li><a href="#services" class="nav-links">Services</a></li>
+                <li><a href="#projects" class="nav-links">Projects</a></li>
+                <li><a href="#contact" class="nav-links">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-detail">
+                    <p class="salutation">Hello, je suis</p>
+                    <h1>Alban <span>HINVI</span></h1>
+                    <p class="speciality">je suis <span id="typing"></span></p>
+                    <p>Je conçois et développe des expériences web modernes, performantes et accessibles — du front-end jusqu'au back-end, des solutions intelligentes et innovantes, la robotique, l'IoT et systèmes embarqués pour répondre à des besoins réels.</p><br>
+                    <div>
+                        <a href="#projects" class="btn-primary">Voir mes projets</a>
+                        <a href="#contact" class="btn-outline">Me contacter</a>
+                    </div>
+                </div> 
+                <div class="hero-image-wrapper">
+                    <img src="images/profil.png" alt="Image_Profil" class="hero-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <h2 class="section-title">About</h2>
+            <div class="section-content">
+                <div class="about-image-wrapper">
+                    <img src="images/about_image (2).png" alt="About-image" class="about-image">
+                </div>
+                <div class="about-text">
+                    <h2>Passionné par la conception de solutions intelligentes, du web aux systèmes<br> embarqués, les réseaux et télécom.</h2>
+                    <p class="text">Étudiant en génie électrique et informatique (Informatique et Télécommunications), je suis profondément intéressé 
+                        par les technologies modernes, l’innovation et les infrastructures numériques. 
+                        Je me spécialise dans le développement web (front-end et back-end), la robotique, l’Internet des objets (IoT), 
+                        les systèmes embarqués ainsi que les réseaux informatiques et les télécommunications.
+                        Mon objectif est de concevoir des solutions intelligentes, performantes et sécurisées, capables de répondre à des 
+                        problématiques réelles, notamment dans les domaines de la connectivité, de l’automatisation et de la communication des systèmes.
+                    </p>
+                    <p>J’aime transformer des idées en projets concrets, en combinant programmation, 
+                        électronique, réseaux et créativité. Curieux et passionné par l’apprentissage continu, 
+                        je développe constamment mes compétences afin de maîtriser les outils et technologies de demain.
+                    </p>
+                    <div class="about-links-list">
+                        <a href="images/cv.pdf" download="curriculum_vitae_alban_hinvi.pdf" class="inline-link">Télécharger mon CV →</a>
+                        <a href="https://github.com/HINVI-12" class="inline-link" target="_blank">GitHub →</a>
+                        <a href="https://www.linkedin.com/in/sèdjro-alban-hinvi-12149b396" class="inline-link" target="_blank">LinkedIn →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section" id="skills">
+            <h2 class="section-title">Skills</h2><br>
+            <div class="container">
+                <h2 class="sous-title">Mon stack technique</h2>
+
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">&#60;/&#62;</div>
+                        <h3>Développement Web</h3>
+                        <ul>
+                            <li><span>HTML / CSS</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="95%"></div>
+                                </div>
+                            </li>
+                            <li><span>JavaScript</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="20%"></div>
+                                </div>
+                            </li>
+                            <li><span>PHP</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="80%"></div>
+                                </div>
+                            </li>
+                            <li><span>MySQL</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="75%"></div>
+                                </div>
+                            </li>
+                            <li><span>Python (Django)</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="70%"></div>
+                                </div>
+                            </li>
+                            <li><span>UML</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="50%"></div>
+                                </div>
+                            </li>
+                            <li><span>Bootstrap</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="30%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">⚙</div>
+                        <h3>Systèmes intelligents : embarqué, IoT et robotique</h3>
+                        <ul>
+                            <li><span>Arduino UNO</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="90%"></div>
+                                </div>
+                            </li>
+                            <li><span>Proteus</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="65%"></div>
+                                </div>
+                            </li>
+                            <li><span>ESP32 / ESP8266</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="70%"></div>
+                                </div>
+                            </li>
+                            <li><span>Rasphberry Pi Pico (MicroPython)</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="80%"></div>
+                                </div>
+                            </li>
+                            <li><span>C / C++ embarqué</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="65%"></div>
+                                </div>
+                            </li>
+                            <li><span>Microcontrôleurs</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="70%"></div>
+                                </div>
+                            </li>
+                            <li><span>Electroniques</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="50%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">&#9881;</div>
+                        <h3>Outils & DevOps</h3>
+                        <ul>
+                            <li><span>Git</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="70%"></div>
+                                </div>
+                            </li>
+                            <li><span>VS Code</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="90%"></div>
+                                </div>
+                            </li>
+                            <li><span> XAMPP / WAMP</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="85%"></div>
+                                </div>
+                            </li>
+                            <li><span>Thonny</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="75%"></div>
+                                </div>
+                            </li>
+                            <li><span>Pycharm</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="80%"></div>
+                                </div>
+                            </li>
+                            <li><span>Arduino IDE</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="90%"></div>
+                                </div>
+                            </li>
+                            <li><span>Linux</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="60%"></div>
+                                </div>
+                            </li>
+                            <li><span>Figma</span>
+                                <div class="bar">
+                                    <div class="bar-fill" data-width="50%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+            
+        <section class="experiences-section" id="experiences">
+            <h2 class="section-title">Expériences</h2><br>
+            <div class="container">
+                <h2 class="sous-title">Mon Parcours professionnel</h2>
+                <div class="vertical-line">
+
+                    <div class="vertical-line-item">
+                        <div class="vertical-line-dot"></div>
+                        <div class="vertical-line-date">2024 — 2025</div>
+                        <div class="vertical-line-content">
+                            <h3>Stage — Maintenance Informatique</h3>
+                            <span class="vertical-line-company">Songhaï — PORTO-NOVO</span>
+                            <p>Participation à la maintenance préventive et corrective des équipements informatiques. 
+                                Diagnostic des pannes matérielles et logicielles, installation de systèmes d’exploitation, 
+                                mise à jour des logiciels et assistance aux utilisateurs pour résoudre les problèmes techniques quotidiens.
+                            </p>
+                            <div class="vertical-line-tags">
+                            <span>Systèmes Informatiques</span><span>Réseaux et logiciels</span><span>Mise à jour matériel</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vertical-line-item">
+                        <div class="vertical-line-dot"></div>
+                        <div class="vertical-line-date">2025 — 2026</div>
+                        <div class="vertical-line-content">
+                            <h3>Stage — Réseau Informatique</h3>
+                            <span class="vertical-line-company">IMSP — Dangbo</span>
+                            <p>Mise en place et configuration de réseaux locaux (LAN) à l’aide d’outils de simulation et d’équipements réels. 
+                                Configuration de routeurs et de commutateurs, attribution et gestion des adresses IP, 
+                                sécurisation du réseau avec des pare-feu et tests de connectivité pour assurer la stabilité du système.
+                            </p>
+                            <div class="vertical-line-tags">
+                            <span>Cisco Packet Tracer</span><span>Installation et configuration</span><span>Routeurs et Swichs</span><span>Pare-feu</span><span>Gestion des address IP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section" id="services">
+            <h2 class="section-title">Services</h2><br><br>
+            <div class="container">
+                <div class="services-grid">
+                    <article class="services-card">
+                        <h3>Développement Web</h3>
+                        <p>Conception et développement de sites web modernes, responsives et performants, 
+                            adaptés aux besoins des particuliers et des entreprises.</p><br>
+                        <div class="vertical-line-tags">
+                            <span>HTML</span><span>CSS</span><span>PHP</span><span>MySQL</span><span>JavaScript</span>
+                            <span>Bootstrap</span><span>UML</span>
+                        </div>
+                    </article>
+                    <article class="services-card">
+                        <h3>Développement Arduino, Robotique & IoT</h3>
+                        <p>Conception de systèmes embarqués intelligents intégrant capteurs et actionneurs, 
+                            automatisation de processus et développement de solutions robotiques innovantes.
+                        </p><br>
+                        <div class="vertical-line-tags">
+                            <span>Arduino IDE</span><span>Arduino UNO</span><span>ESP32</span><span>Proteus</span>
+                            <span>Thonny</span><span>Rasphberry pi pico</span><span>MicroPython</span>
+                        </div>
+                    </article>
+                    <article class="services-card">
+                        <h3>Electronique</h3>
+                        <p>Conception, simulation et réalisation de circuits électroniques, 
+                            incluant le câblage, les tests et l’optimisation des systèmes.
+                        </p><br>
+                        <div class="vertical-line-tags">
+                            <span>Proteus</span>
+                        </div>
+                    </article>
+                    <article class="services-card">
+                        <h3>Réseaux Informatique</h3>
+                        <p> Mise en place, configuration et sécurisation de réseaux informatiques, 
+                            avec simulation et tests pour garantir performance et fiabilité.
+                        </p><br>
+                        <div class="vertical-line-tags">
+                            <span>Cisco Packet Tracer</span><span>Intallation de Réseau local</span>
+                        </div>
+                    </article>
+                    <!-- <article class="services-card">
+                        <h3>Création de jeux en Java</h3>
+                        <p>Conception de jeux 2D en Java avec une logique claire, une interface interactive, du prototype à la version jouable.</p><br>
+                        <div class="vertical-line-tags">
+                            <span>Java</span><span>POO</span>
+                        </div>
+                    </article> -->
+                    <!-- Création de flyers -->
+                    <article class="services-card">
+                        <h3>Création de flyers</h3>
+                        <p>Conception de flyers professionnels et attrayants pour vos événements, 
+                            promotions ou campagnes de communication.
+                        </p><br>
+                        <div class="vertical-line-tags">
+                            <span>Photoshop</span>
+                            <span>Illustrator</span>
+                            <span>Canva</span><span>Figma</span>
+                        </div>
+                    </article>
+
+                    <!-- Montage vidéo -->
+                    <article class="services-card">
+                        <h3>Montage vidéo</h3>
+                        <p>Montage et post-production de vidéos : découpage, effets, 
+                            transitions, habillage sonore et exportation multi-formats.
+                        </p><br>
+                        <div class="vertical-line-tags">
+                            <span>Premiere Pro</span>
+                            <span>After Effects</span>
+                            <span>CapCut</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section" id="projects">
+            <h2 class="section-title">Projects</h2><br>
+            <div class="container">
+                <h2 class="sous-title">Mes réalisations</h2>
+                <div class="projects-grid">
+                    <article class="project-card featured">
+                        <div class="project-meta">
+                            <span class="project-tag">PHP · MySQL · JS . HTML . CSS</span>
+                            <span class="project-year">En cours</span>
+                        </div>
+                        <h3>Plateforme e-commerce</h3>
+                        <p>Application web complète avec gestion de catalogue, panier, paiement et back-office administrateur. Développée en PHP natif avec base de donner MySQL.</p>
+                        <div class="project-links">
+                            <a href="#" class="proj-link">Voir le projet →</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-meta">
+                            <span class="project-tag">C / C++ · Arduino · Capteurs</span>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <!--<img src="images/voit_aut_uno.png" alt="Voiture autonome (Arduino)" class="prj">-->
+                        <h3>Voiture autonome (Arduino)</h3>
+                        <p>Conception et développement d’un robot mobile autonome basé sur Arduino. 
+                            Le système utilise des capteurs pour la détection d’obstacles et 
+                            un algorithme de navigation permettant d’éviter les collisions en temps réel. 
+                            Le contrôle des moteurs est assuré via un pont en H (L298N).
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="proj-link">Voir le projet →</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-meta">
+                            <span class="project-tag">Electronique digital</span>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <h3>Compteur modulo 10</h3>
+                        <p>Réalisation d’un compteur numérique avec affichage sur afficheurs 7 segments.
+                            Le système utilise un NE555 pour générer l’horloge (vitesse réglable par potentiomètre),
+                            un bouton poussoir pour la remise à zéro et une LED pour visualiser la fréquence de comptage.
+                        </p>
+                        <div class="project-links">
+                            <a href="images/compteur_modulo_10.mp4" class="proj-link">voir le projet →</a>
+                        </div>
+                    </article>
+                    <!-- Projet Flyer -->
+                    <article class="project-card">
+                        <div class="project-meta">
+                            <span class="project-tag">Design graphique</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3>Création de flyers</h3>
+                        <p>Conception de flyers promotionnels et d'affiches événementielles : 
+                            mise en page, choix typographiques, harmonie des couleurs et 
+                            adaptation aux formats print et digital.
+                        </p>
+                        <div class="project-links">
+                            <a href="images/flyers.jpg" class="proj-link">voir le projet →</a>
+                        </div>
+                    </article>
+
+                    <!-- Projet Montage vidéo -->
+                    <article class="project-card">
+                        <div class="project-meta">
+                            <span class="project-tag">Montage vidéo</span>
+                            <span class="project-year">2026</span>
+                        </div>
+                        <h3>Montage et post-production</h3>
+                        <p>Réalisation de montages vidéo avec découpage, transitions, 
+                            effets visuels, habillage sonore et exportation multi-formats 
+                            adaptés aux réseaux sociaux et au web.
+                        </p>
+                        <div class="project-links">
+                            <a href="images/montage_video.mp4" class="proj-link">voir le projet →</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                    <div class="project-meta">
+                        <span class="project-tag">HTML . CSS . JavaScript . PHP . MySQL</span>
+                        <span class="project-year">2026</span>
+                    </div>
+                    <h3>Coffee Shop Management</h3>
+                    <p>Application de gestion de produits et de commandes pour un café — 
+                        ajout produit, gestion commandes, tableau de bord admin et authentification.
+                    </p>
+                    <div class="project-links">
+                        <a href="" class="proj-link" target="_blank">
+                        voir le projet →
+                        </a>
+                    </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <h2 class="section-title">Contact</h2><br>
+            <div class="container">
+                <h2 class="sous-title">Travaillons ensemble</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <p>Vous avez un projet web, une question ou souhaitez simplement échanger ? N'hésitez pas à me contacter.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <span class="contact-icon"><i class="fa fa-paper-plane"></i></span>
+                                <a href="mailto:albanhinvi@gmail.com">albanhinvi@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon"><i class="fa fa-phone"></i></span>
+                                <a href="tel:+2290157441280" target="_blank">+229 01 57 44 12 80</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon"><i class="fab fa-linkedin"></i></span>
+                                <a href="https://www.linkedin.com/in/sèdjro-alban-hinvi-12149b396" target="_blank">linkedin.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon"><i class="fab fa-youtube"></i></span>
+                                <a href="https://www.youtube.com/@SèdjroAlbanHINVI" target="_blank">Youtube.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon"><i class="fab fa-tiktok"></i></span>
+                                <a href="https://www.tiktok.com/@alban.hinvi" target="_blank">Tiktok</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon"><i class="fab fa-instagram"></i></span>
+                                <a href="https://www.instagram.com/albanhinvi?igsh=YWd5cTFwZ215cW9i" target="_blank">Instagram.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <form id="contactForm" class="contact-form">
+                        <div id="form-message" class="form-message"></div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nom</label>
+                                <input type="text" id="name" name="name" placeholder="Votre Nom*" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="prenom">Prénom</label>
+                                <input type="text" id="prenom" name="prenom" placeholder="Votre Prénom*" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="exemple@gmail.com" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <input type="text" id="subject" name="subject" placeholder="Votre projet ou demande..." required />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" id="submitBtn">
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container footer-inner">
+            <span class="footer-logo">Alban HINVI<span>.</span></span>
+            <p>© 2025 — Développé avec ♥</p>
+            <div class="footer-links">
+                <a href="https://wa.me/+2290157441280" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/alban.hinvi" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://m.me/alban.hinvi" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
+            </div>
+            </div>
+        </footer>
+    </main>
+
+    <script id="typing-effect-fixed">
+        const words = [
+            "Développeur Web (Front / Back)",
+            "Technicien en Robotique ",
+            "Concepteur de solutions IoT",
+            "Créateur de systèmes embarqués"
+        ];
+        let i = 0;
+        let j = 0;
+        let isDeleting = false;
+        const typingElement = document.getElementById("typing");
+        function typeEffect() {
+            let currentWord = words[i];
+            if (isDeleting) {
+                j--;
+            } else {
+                j++;
+            }
+            typingElement.textContent = currentWord.substring(0, j);
+            let speed = isDeleting ? 50 : 100;
+            // Quand le mot est COMPLET
+            if (!isDeleting && j === currentWord.length) {
+                isDeleting = true;
+                speed = 1500; // pause après mot complet
+            }
+            // Quand le mot est complètement supprimé
+            else if (isDeleting && j === 0) {
+                isDeleting = false;
+                i = (i + 1) % words.length;
+                speed = 500;
+            }
+            setTimeout(typeEffect, speed);
+        }
+        typeEffect();
+
+        //skills
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const bars = document.querySelectorAll(".bar-fill");
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        const bar = entry.target;
+                        const width = bar.getAttribute("data-width");
+
+                        bar.style.width = width;
+
+                        // option : arrêter l'observation après animation
+                        observer.unobserve(bar);
+                    }
+                });
+            }, {
+                threshold: 0.5  // 50% de la barre visible
+            });
+
+            bars.forEach(bar => {
+                observer.observe(bar);
+            });
+
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init({
+            publicKey: "FY2G7sULbbg8ti49B" /*"TA_PUBLIC_KEY"*/
+        });
+
+        document.getElementById("contactForm")
+        .addEventListener("submit", function(e){
+
+            e.preventDefault();
+
+            const btn = document.getElementById("submitBtn");
+
+            btn.disabled = true;
+            btn.textContent = "Envoi en cours...";
+
+            const data = {
+                nom: document.getElementById("name").value,
+                prenom: document.getElementById("prenom").value,
+                email: document.getElementById("email").value,
+                sujet: document.getElementById("subject").value,
+                message: document.getElementById("message").value
+            };
+            emailjs.send(
+                "service_kw3argk",/*TON_SERVICE_ID*/
+                "template_aiqoa9q",/*TON_TEMPLATE_ID*/
+                data
+            )
+            .then(() => {
+
+                document.getElementById("form-message").innerHTML =
+                "<p style='color:white'>✅ Message envoyé avec succès !</p>";
+
+                this.reset();
+
+                btn.disabled = false;
+                btn.textContent = "Envoyer le message";
+
+            })
+            .catch((error) => {
+
+                document.getElementById("form-message").innerHTML =
+                "<p style='color:red'>❌ Erreur lors de l'envoi.</p>";
+
+                console.error(error);
+
+                btn.disabled = false;
+                btn.textContent = "Envoyer le message";
+            });
+        });
+    </script>
+        
+</body>
+</html>
