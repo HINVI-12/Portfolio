@@ -37,14 +37,17 @@
                 <div class="hero-detail">
                     <p class="salutation">Hello, je suis</p>
                     <h1>Alban <span>HINVI</span></h1>
+                    <div class="hero-image-wrapper hero-image-mobile">
+                        <img src="images/profil.png" alt="Image_Profil" class="hero-image">
+                    </div>
                     <p class="speciality">je suis <span id="typing"></span></p>
-                    <p>Je conçois et développe des expériences web modernes, performantes et accessibles — du front-end jusqu'au back-end, des solutions intelligentes et innovantes, la robotique, l'IoT et systèmes embarqués pour répondre à des besoins réels.</p><br>
+                    <p>Je conçois et développe des expériences web modernes, performantes et accessibles — du front-end jusqu'au back-end, des solutions intelligentes et innovantes, la robotique, l'IoT et systèmes embarqués pour répondre à des besoins réels.</p>
                     <div>
                         <a href="#projects" class="btn-primary">Voir mes projets</a>
                         <a href="#contact" class="btn-outline">Me contacter</a>
                     </div>
                 </div> 
-                <div class="hero-image-wrapper">
+                <div class="hero-image-wrapper hero-image-desktop">
                     <img src="images/profil.png" alt="Image_Profil" class="hero-image">
                 </div>
             </div>
@@ -510,6 +513,24 @@
             </div>
         </footer>
     </main>
+
+    <!-- Menu hamburger -->
+    <script>
+        const toggle = document.getElementById("mobile-menu");
+        const menu = document.getElementById("menu");
+
+        toggle.addEventListener("click", () => {
+            toggle.classList.toggle("active");
+            menu.classList.toggle("open");
+        });
+
+        document.querySelectorAll(".nav-links").forEach(link => {
+            link.addEventListener("click", () => {
+                toggle.classList.remove("active");
+                menu.classList.remove("open");
+            });
+        });
+    </script>
 
     <script id="typing-effect-fixed">
         const words = [
