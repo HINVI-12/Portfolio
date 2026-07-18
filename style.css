@@ -899,9 +899,6 @@ footer p {
     }
 }
 
-
-/* ========== RESPONSIVE BREAKPOINTS ========== */
-
 /* Tablette large (< 1120px) */
 @media (max-width: 1120px) {
     .hero-content {
@@ -1074,12 +1071,6 @@ footer p {
     .hero-detail p {
         font-size: 0.95rem;
     }
-
-    /* .hero-detail p + div {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 2rem;
-    } */
 
     .btn-primary,
     .btn-outline {
