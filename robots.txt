@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hinvi-12.github.io/Portfolio/sitemap.xml
