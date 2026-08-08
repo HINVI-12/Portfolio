@@ -20,6 +20,41 @@
     box-sizing: border-box;
 }
 
+* {
+    cursor: none; /* cache le curseur natif */
+}
+
+.cursor-dot,
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+.cursor-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--accent, #22c55e);
+}
+
+.cursor-outline {
+    width: 32px;
+    height: 32px;
+    border: 2px solid var(--accent, #22c55e);
+    transition: width 0.2s ease, height 0.2s ease, transform 0.15s ease;
+}
+
+/* Effet d'agrandissement au survol des liens/boutons */
+a:hover ~ .cursor-outline,
+button:hover ~ .cursor-outline {
+    width: 48px;
+    height: 48px;
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 96px;
