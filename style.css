@@ -179,7 +179,6 @@ nav .nav-links:hover {
     margin: 0 auto;
     background: linear-gradient(180deg, rgba(121,0,31,0.94), rgba(107,0,26,0.96));
     border-radius: 0 0 28px 28px;
-    box-shadow: var(--shadow);
 }
 
 .hero-content {
