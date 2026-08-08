@@ -28,7 +28,7 @@ html {
 body {
     min-height: 100vh;
     background: radial-gradient(circle at top, rgba(255,0,68,0.14), transparent 32%),
-                linear-gradient(180deg, #8e0126 0%, #3B000F 100%);
+                linear-gradient(180deg, #71001f 0%, #480012 100%);
     color: var(--text);
     font-family: 'DM Sans', system-ui, sans-serif;
     line-height: 1.75;
@@ -546,9 +546,9 @@ nav .nav-links:hover {
     border-color: #93c5fd;
 }
 
-.experiences-section {
+/* .experiences-section {
     background: linear-gradient(180deg, rgba(121,0,31,0.12), rgba(59,0,15,0.08));
-}
+} */
 
 .vertical-line {
     position: relative;
