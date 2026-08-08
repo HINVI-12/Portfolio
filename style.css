@@ -1222,8 +1222,9 @@ footer p {
     }
 
     .about-links-list {
-        flex-direction: column;
+        display: flex;
         gap: 0.75rem;
+        align-items: center;
     }
 
     .vertical-line-tags span {
