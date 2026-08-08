@@ -263,7 +263,7 @@ if (window.matchMedia("(pointer: fine)").matches) {
 
     // Nombre de particules (réduit sur mobile)
     function getParticleCount() {
-        return window.innerWidth < 768 ? 35 : 80;
+        return window.innerWidth < 768 ? 35 : 70;
     }
 
     function createParticle() {
