@@ -28,7 +28,7 @@ html {
 body {
     min-height: 100vh;
     background: radial-gradient(circle at top, rgba(255,0,68,0.14), transparent 32%),
-                linear-gradient(180deg, #71001f 0%, #480012 100%);
+                linear-gradient(180deg, #71001f 0%, #5b0017 100%);
     color: var(--text);
     font-family: 'DM Sans', system-ui, sans-serif;
     line-height: 1.75;
@@ -648,9 +648,9 @@ nav .nav-links:hover {
     align-items: start;
 }
 
-.contact-section {
+/* .contact-section {
     background: linear-gradient(180deg, rgba(59,0,15,0.08), transparent 98%);
-}
+} */
 
 .contact-info > p {
     color: #cbd5e1;
