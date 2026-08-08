@@ -793,16 +793,20 @@ footer p {
     color: var(--text);
     font-size: 1.2rem;
     font-weight: 600;
+    padding: 0px 8px 0px 8px;
+    border: 1px solid #8e0126;
+    border-radius: 10px;
     transition: color 0.25s ease;
 }
 
 .footer-links a:hover {
     color: var(--accent);
+    border: 1px solid var(--accent);
 }
 
 .prj {
     width: 100%;
-    max-width: 450px;
+    max-width: 480px;
     border-radius: 20px;
 }
 
