@@ -170,7 +170,7 @@ if (window.matchMedia("(pointer: fine)").matches) {
     });
 }
 
-// ===== Animation de pluie en arrière-plan =====
+/* // ===== Animation de pluie en arrière-plan =====
 (function () {
     const canvas = document.getElementById('rain-bg');
     if (!canvas) return; // sécurité : si le canvas n'existe pas, on ne fait rien
@@ -343,4 +343,4 @@ if (window.matchMedia("(pointer: fine)").matches) {
     }
 
     drawParticles();
-})();
+})(); */
