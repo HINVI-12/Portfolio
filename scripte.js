@@ -186,7 +186,7 @@ if (window.matchMedia("(pointer: fine)").matches) {
     window.addEventListener('resize', resizeCanvas);
  
     // Nombre de gouttes (réduit sur mobile pour la performance)
-    const dropCount = window.innerWidth < 768 ? 60 : 300;
+    const dropCount = window.innerWidth < 768 ? 50 : 80;
  
     function createDrop() {
         return {
@@ -205,7 +205,7 @@ if (window.matchMedia("(pointer: fine)").matches) {
     function drawRain() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.strokeStyle = '#93c5fd';
-        ctx.lineWidth = 1.5;
+        ctx.lineWidth = 1;
  
         drops.forEach(drop => {
             ctx.beginPath();
